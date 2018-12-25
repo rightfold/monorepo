@@ -1,0 +1,13 @@
+The database is called uphub_test. It contains the uphub schema that contains
+all objects. The public schema is deliberately deleted to avoid security
+problems with relying on schema search paths.
+
+There are two roles:
+
+    The role uphub_application is used by the application for ordinary
+    operations that manipulate the data in the database.
+
+    The role uphub_migrations is used by Sqitch for running migrations. This
+    role owns the objects in the database as well as the database itself.
+
+We do not use the Sqitch verify feature.

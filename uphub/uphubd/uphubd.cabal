@@ -1,0 +1,56 @@
+cabal-version: >= 1.10
+build-type: Simple
+
+name: uphubd
+version: 0.0.0.0
+
+library
+    hs-source-dirs:
+        src
+
+    exposed-modules:
+        Database.Postgresql,
+        System.Zmq4.Cbor,
+        System.Zmq4.Extra,
+        Uphubd.Main.Uphubd_scheduler,
+        Uphubd.Monitor,
+        Uphubd.Scheduler
+
+    default-language:
+        Haskell2010
+
+    ghc-options:
+        -Wall
+        -Wincomplete-record-updates
+        -Wincomplete-uni-patterns
+
+    default-extensions:
+        DeriveAnyClass,
+        DerivingStrategies,
+        GeneralizedNewtypeDeriving,
+        LambdaCase,
+        OverloadedStrings,
+        RecordWildCards
+
+    build-depends:
+        base,
+        bytestring,
+        optparse-applicative,
+        postgresql-libpq,
+        resource-pool,
+        serialise,
+        zeromq4-haskell
+
+executable uphubd_scheduler
+    hs-source-dirs:
+        main
+
+    main-is:
+        uphubd_scheduler.hs
+
+    default-language:
+        Haskell2010
+
+    build-depends:
+        base,
+        uphubd

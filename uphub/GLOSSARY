@@ -1,0 +1,12 @@
+[health]
+The health of a service is either UP or DOWN.
+
+[monitor]
+A monitor describes how and when a service must be polled.
+
+[poll]
+To poll a service means to interact with it to figure out its health.
+
+[scheduler]
+The component that periodically finds monitors that have not been polled for
+since their interval.

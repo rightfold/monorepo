@@ -1,0 +1,7 @@
+%syntax-version=1.0.0
+%project=uphub
+
+uphub_schema 2019-01-04T20:13:09Z r <r@chloe-notebook>
+monitors_table [uphub_schema] 2019-01-04T20:16:43Z r <r@chloe-notebook> # Add monitors table
+polls_table [monitors_table] 2019-01-05T12:17:37Z r <r@chloe-notebook> # Add polls table
+schedule_view [polls_table] 2019-01-15T17:45:55Z r <r@chloe-notebook> # Add schedule view
